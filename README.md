@@ -5,10 +5,10 @@
   </p>
 
 #### Q1: Upgrade Kubernetes
-    Upgrade the current version of kubernetes from 1.32.0 to 1.33.0 exactly using the kubeadm utility. Make sure that the upgrade is carried out one node at a time starting with the controlplane node. To minimize downtime, the deployment gold-nginx should be rescheduled on an alternate node before upgrading each node.
+Upgrade the current version of kubernetes from 1.32.0 to 1.33.0 exactly using the kubeadm utility. Make sure that the upgrade is carried out one node at a time starting with the controlplane node. To minimize downtime, the deployment gold-nginx should be rescheduled on an alternate node before upgrading each node.
+</br>
 
-
-    Upgrade controlplane node first and drain node node01 before upgrading it. Pods for gold-nginx should run on the controlplane node subsequently.
+Upgrade controlplane node first and drain node node01 before upgrading it. Pods for gold-nginx should run on the controlplane node subsequently.
 
 <details>
 <summary>Solution</summary>
@@ -43,11 +43,16 @@ kubectl get pods -n gold-nginx -o wide
 </details>
 
 #### Q2: Weight 15
-    Print the names of all deployments in the `admin2406` namespace in the following format:
+Print the names of all deployments in the `admin2406` namespace in the following format:
+</br>
 
 `DEPLOYMENT`   `CONTAINER_IMAGE`   `READY_REPLICAS`   `NAMESPACE`
 
+</br>
+
 `<deployment name>`   `<container image used>`   `<ready replica count>`   `<Namespace>`. The data should be sorted by the increasing order of the deployment name.
+
+</br>
 
 > Example:
 `DEPLOYMENT`   `CONTAINER_IMAGE`   `READY_REPLICAS`   `NAMESPACE`
